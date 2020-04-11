@@ -1,0 +1,10 @@
+# Diverse inputs in neural networks - regression on images and numbers
+
+1. TOC
+{:toc}
+
+```python
+import torch
+
+torch.stuff()
+```

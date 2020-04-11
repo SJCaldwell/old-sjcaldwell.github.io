@@ -1,4 +1,5 @@
 # About
 
-This is where you put the contents of your *About* page. Like all your pages, it's in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
+Machine Learning engineer at Handled. 
 
+Interested in deep reinforcement learning and increasing the robustness of AI systems. 

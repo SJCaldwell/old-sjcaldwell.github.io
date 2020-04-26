@@ -1,8 +1,5 @@
 # Data Scientist's Review of OSCP
 
-1. TOC
-{:toc}
-
 24 hours of being bent over a keyboard, four energy drinks and two microwaveable chicken-fried rices later, I was finally awarded my "Offensive Security Certified Professional". For those not involved in security, this can be loosely translated to a "hacks real decently" badge. 
 
 ![](/images/oscp_passed.png "Lowkey cried when I saw this")
@@ -10,6 +7,9 @@
 My friends would agree I'm not a stoic person, but I can count on one hand the number times I've been truly, *physically*, overwhelmed with excitement. When the above email came in at 11am on a workday, I slammed my fist on my office desk and shouted like I'd just scratched a winning lottery ticket. I think I rode that high for a week, and even thinking about it today makes me smile. 
 
 What follows is a review of the course that might be valuable for those taking it or who are considering taking it. For those, like me, interested in applying machine learning to the problems of security, I think it's wise to understand how broad and deep the field is. Many problems I see tackled in academic circles are incredibly far removed from the day to day work, and relatively few so far have been built that can even match a well-done whitelist. I think it's an issue of engineers not joining forces with the people doing the work, so consider this an attempt to bridge the gap. 
+
+1. TOC
+{:toc}
 
 ## Before you start
 

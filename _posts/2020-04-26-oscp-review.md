@@ -1,14 +1,17 @@
 # Data Scientist's Review of OSCP
 
+TOC
+{:toc}
+
 24 hours of being bent over a keyboard, four energy drinks and two microwaveable chicken-fried rices later, I was finally awarded my "Offensive Security Certified Professional". For those not involved in security, this can be loosely translated to a "hacks real decently" badge. 
 
-[ insert image capture ]
+![](/images/oscp_passed.png "Lowkey cried when I saw this")
 
 My friends would agree I'm not a stoic person, but I can count on one hand the number times I've been truly, *physically*, overwhelmed with excitement. When the above email came in at 11am on a workday, I slammed my fist on my office desk and shouted like I'd just scratched a winning lottery ticket. I think I rode that high for a week, and even thinking about it today makes me smile. 
 
 What follows is a review of the course that might be valuable for those taking it or who are considering taking it. For those, like me, interested in applying machine learning to the problems of security, I think it's wise to understand how broad and deep the field is. Many problems I see tackled in academic circles are incredibly far removed from the day to day work, and relatively few so far have been built that can even match a well-done whitelist. I think it's an issue of engineers not joining forces with the people doing the work, so consider this an attempt to bridge the gap. 
 
-# Before you start
+## Before you start
 
 The course doesn't really have pre-requisites. Basically everything you *need* is available within the course itself. However, the more you know on the way in the easier you'll be able to focus on the important things. To be ready to take the course, I'd recommend:
 
@@ -22,7 +25,7 @@ I'm not asking you to be a long-beared expert with an arcane understanding of th
 
 At first, especially those coming from a unix background, this will seem unnecesarily arcane. The more experience you get, the happier you'll be to find a command line tool where you thought you'd have to use a GUI. The ability to script the command-line tool means that the slightly higher learning curve gives you a massive ROI in time saved. 
 
-# The Course
+## The Course
 
 After signing up for the Penetration Testing with Kali Linux Course, you recieve quite a bit of material.
 
@@ -34,7 +37,7 @@ I'd been working in the field for a little less than a year when I started the c
 
 While it's tempting to just jump into the labs, fire up nmap and Metasploit and see how many boxes you can pop, it's best to start with the 'academic' part of the course. You're paying for your time with access to the labs, and you want to maximize your productive time in the labs. If you're not *intimiately* familiar with the course material provided, you'll be completely hopeless in the labs. You might get one or two of the easy ones, but this quick progress will slow to a complete crawl
 
-# Course Material
+## Course Material
 
 The pdf has 18 chapters, each broken down into several sections. Offensive Security begins from the ground up, explaining the fundamental technical skills required to successfully complete a penetration test. 
 
@@ -44,7 +47,7 @@ For example, I'm a software developer and data scientist by training, and my kno
 
 A common critique of the course is that the vulnerabilities covered are "too old" and therefore not useful. I think that's silly. Any course that promised to teach you the latest and greatest in common vulnerabilities would be out of date before it was in print. Offensive Security, more than teaching a specific technique, is attempting to teach the student a useful *methodology* that will remain effective regardless of the technology in use. 
 
-It doesn't matter that you won't be able to get root using [memodipper][memodipper_url] on many modern techniques. The point is you understand that taking the time to enumerate the linux kernel version in use on a target machine and searching Exploit DB for vulnerabilities is a step that can't be skipped. Those looking for silver bullets won't find them here, but it's this cycle of exploitation and patching that leads to interesting work for researchers, and an ever-changing day job for pentesters. 
+It doesn't matter that you won't be able to get root using [memodipper](https://www.exploit-db.com/exploits/18411/) on many modern techniques. The point is you understand that taking the time to enumerate the linux kernel version in use on a target machine and searching Exploit DB for vulnerabilities is a step that can't be skipped. Those looking for silver bullets won't find them here, but it's this cycle of exploitation and patching that leads to interesting work for researchers, and an ever-changing day job for pentesters. 
 
 Another pointer here - do all the exercises in the PDF as soon as you run into them. A full write-up of all exercises (along with a write-up of 10 rooted lab machines) can give you five bonus points on the exam. Whether you need it or not, the act of doing the exercises and writing them up are excellent preparation and going into the exam later with these writeups done will be a confidence booster. Also, if you fail by 5 points you'll feel incredibly dumb.
 
@@ -56,7 +59,7 @@ I was very luck that my employer allowed me a week of paid time to work on the c
 
 That, unfortunately, is the easy part.
 
-# The Labs
+## The Labs
 
 The hard part is the shining jewel of the course. The lab. The lab network contains around 50 different hosts, each vulnerable to exploitation. Beyond knowing that getting root access to each machine is possible, you're not given any more leads than that. Some machines are require previous access to other machines in order to pivot to new machines. Some machines are not initially unlocked, but you can use exploited hosts on the first subnets to get to others.
 
@@ -82,17 +85,17 @@ At this point, I had already completed my lab writeups and exercises. But make s
 
 This was a pain. Don't be like me! Read the documentation early. Also the "rules" can change, so don't take what I wrote here as gospel. I found out the writeups and lab exercises now only counted for 5 points (as opposed to 10) right before my exam started. This was a stressful and demoralizing realization to have, and could've been solved by just. Reading. 
 
-# The Exam
+## The Exam
 
 The exam is pretty intense. You will recieve an email from Offensive Security with an exam guide and VPN access to an exam network. This exam network has a variety of machines that need to be compromised within 24 hours. The constraint here isn't so much that the machines are really difficult - if you've gone beyond the low-hanging fruit in the labs, you will have seen items of similar difficulty.
 
 The biggest problem is the time constraint. In the labs, you have the ability to get frustrated with something, leaving it alone, and have fresh eyes to get root where you couldn't before. No such luck here. To get through this, you'll want to have your enumeration down to a science and have a solid bag of tricks to rely on. Personally, I had to explain to my housemates and girlfriend beforehand to just... leave me alone for 24 hours. I had a near lethal amount of caffeine on hand, and had zero obligations for the next 72 hours. You should do the same, if you can.
 
-Stick to the schedule you set for yourself before the exam starts. I had been keeping up with the Offensive Security twitter, and someone who had recently completed their OSCP shared their schedule they had made with the iOS app [Timer Free][timer_free_url]. This allows you to block your time, and specify how long you intend to spend with a target in advance. Without this, it's easy to just *forget* to take breaks. The timer keeps you honest, and avoids timesinks that aren't productive.
+Stick to the schedule you set for yourself before the exam starts. I had been keeping up with the Offensive Security twitter, and someone who had recently completed their OSCP shared their schedule they had made with the iOS app [Timer Free](https://itunes.apple.com/us/app/timer-free-multiple-countdown-reminder/id616033718?mt=8). This allows you to block your time, and specify how long you intend to spend with a target in advance. Without this, it's easy to just *forget* to take breaks. The timer keeps you honest, and avoids timesinks that aren't productive.
 
 In theory, that is. My exam was going great, until I missed a checkmark - I wanted my 3rd root before I got any sleep, and it wasn't coming. I skipped my scheduled four-hour nap time because I was certain I'd have it any minute now. This actually didn't get me any more points, but it did make the next day of reporting incredibly painful. So plan to sleep. And stick to the plan! 
 
-# The Report
+## The Report
 
 After finishing your exam, you have an additional 24 hours to fill out the report. This involves documenting the vulnerabilities you discovered on each host, as well as a step by step path to exploiting them. This means screenshots as well! I took a completely ludicrous amount of screenshots through the exam. I didn't sort them at all, so I was searching through a huge amount of material trying to find screenshots I *knew* I'd taken. Take the time to name them and place them in folders relevant to eac host as you go.
 
@@ -100,11 +103,11 @@ This will help you to quickly determine whether you got all the screenshots you 
 
 Keep the writing professional as well. You're going to be tired from your last night of work, but you can't skip spellcheck. If you go on to pentest professionally, being "tired" doesn't fly as an excuse for sloppy work, and it won't fly here other. Remember, Offensive Security is judging you by your value as a penetration tester. A tester who can't professionally and concisely convey security concepts to a client won't last long in the field, and Offensive Security keeps this in mind when determining a pass or fail.
 
-# The results
+## The results
 
 Fortunately, I only had to bite my nails for around a day before I got my results. Slightly less than 24 hours before I submitted my exam results, I had an answer in my inbox. 
 
-# Closing
+## Closing Thoughts
 
 While I took the exam as a pentester, I'm not in the field anymore. These days I'm a data scientist, using deep learning to engineer predictive models. My hope is to apply machine learning to infosec, particularly pentesting, and create tools practicioners will find invaluable. More ambitiously, I hope to design and create an agent that can attack or defend autonomously, without the need for human intervention. It's a thorny problem fraught with complications, but better to fail at an interesting problem and learning something than easily succeed with a boring one. 
 
@@ -112,4 +115,4 @@ Reinforcement learning tells us that to train an agent, you need an environment 
 
 Still, I think it's obvious that the best tools are made by folks who would use them. Many would-be Jobs and Zuckerbergs attempt to solve problems they don't really understand with an eye to their presumptive valuation. In my experience this leads to tools that don't really serve anyone built by people who aren't very excited about them. It's a lot of work, but I think if you're going to make a useful tool for a field, you should strive to be at least a knowledgable amateur about it. You at least have to know enough to understand the *real* domain experts. 
 
-I don't think taking a single exam made me an expert that can build tools for hackers. That will take more work on my part, perhaps some [follow up courses][offsec_link_2] and people in security willing to engage with me. But taking the course broadened my horizons and understanding of what hacking entails, and hopefully will make me capable of communicating with the domain experts I want to collaborate with. I'm also insanely proud to have completed the course!
+I don't think taking a single exam made me an expert that can build tools for hackers. That will take more work on my part, perhaps some [follow up courses](https://www.offensive-security.com/awae-oswe/) and people in security willing to engage with me. But taking the course broadened my horizons and understanding of what hacking entails, and hopefully will make me capable of communicating with the domain experts I want to collaborate with. I'm also insanely proud to have completed the course!

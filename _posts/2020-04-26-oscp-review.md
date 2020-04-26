@@ -1,6 +1,6 @@
 # Data Scientist's Review of OSCP
 
-TOC
+1. TOC
 {:toc}
 
 24 hours of being bent over a keyboard, four energy drinks and two microwaveable chicken-fried rices later, I was finally awarded my "Offensive Security Certified Professional". For those not involved in security, this can be loosely translated to a "hacks real decently" badge. 

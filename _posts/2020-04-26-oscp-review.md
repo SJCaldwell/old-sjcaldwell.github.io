@@ -6,7 +6,7 @@
 
 My friends would agree I'm not a stoic person, but I can count on one hand the number times I've been truly, *physically*, overwhelmed with excitement. When the above email came in at 11am on a workday, I slammed my fist on my office desk and shouted like I'd just scratched a winning lottery ticket. I think I rode that high for a week, and even thinking about it today makes me smile. 
 
-What follows is a review of the course that might be valuable for those taking it or who are considering taking it. For those, like me, interested in applying machine learning to the problems of security, I think it's wise to understand how broad and deep the field is. Many problems I see tackled in academic circles are incredibly far removed from the day to day work, and relatively few so far have been built that can even match a well-done whitelist. I think it's an issue of engineers not joining forces with the people doing the work, so consider this an attempt to bridge the gap. 
+What follows is a review of the course that might be valuable for those taking it or who are considering taking it. For those, like me, interested in applying machine learning to the problems of security, I think it's wise to understand how broad and deep the field is. Many problems I see tackled in academic circles are incredibly far removed from the day to day work, and relatively few so far have been built that can even match a well-done whitelist used for filtering bad traffic. That's not to say there's no potential there, I think it's an issue of engineers not joining forces with the people doing the work, so consider this an attempt to bridge the gap. 
 
 1. TOC
 {:toc}
@@ -15,15 +15,15 @@ What follows is a review of the course that might be valuable for those taking i
 
 The course doesn't really have pre-requisites. Basically everything you *need* is available within the course itself. However, the more you know on the way in the easier you'll be able to focus on the important things. To be ready to take the course, I'd recommend:
 
-1. A year of scripting experience.
+### A year of scripting experience.
 
 A lot of pentesting is information gathering, enumerating an attack surface. If you do this by hand, one terminal command at a time, you'll be extremely inefficient and slow. Knowing how to write a little bash or python to script some of this information gathering, and save the results somewhere useful for you to review means you can gather information in the background while you preform useful research on a target. The course teaches you this of course, but if I was experiencing frustrations of learning to program for the first time at the same time I was learning to deploy an exploit, I imagined I'd be incredibly frustrated. When things aren't working, the first thing you want to do is find a *focal point of confusion*. What is the thing you're not understanding causing things to not work the way you hoped they would? The less you really understand, the fewer of those potential focal points you can eliminate, and the more frustrated you'll be. If you know scripting, you'll be fairly certain your errors are coming from a lack of understand in the security topic.
 
-2. A working understanding of unix
+### A working understanding of unix
 
-I'm not asking you to be a long-beared expert with an arcane understanding of the dark arts. You don't even have to know whether you want a cron job or a daemon for a long running job. You should, however, be comfortable in a terminal. That's where you'll spend 80% of your time if you're doing your job right and 90% of your time if you're really getting the hang of it. Some tools. For web testing, there's no substitute to using a browser and Burp Suite proxy, but you shouldn't use many more GUIs than that. 
+I'm not asking you to be a long-beared expert with an arcane understanding of the dark arts. You don't even have to know whether you want a cron job or a daemon for a long running job. You should, however, be comfortable in a terminal. That's where you'll spend 80% of your time if you're doing your job right and 90% of your time if you're really getting the hang of it. Sometimes you need a GUI, though. For web testing, there's no substitute to using a browser and Burp Suite proxy, but you shouldn't use many more than that.
 
-At first, especially those coming from a unix background, this will seem unnecesarily arcane. The more experience you get, the happier you'll be to find a command line tool where you thought you'd have to use a GUI. The ability to script the command-line tool means that the slightly higher learning curve gives you a massive ROI in time saved. 
+At first, especially those coming in without a unix background, this will seem unnecesarily abstruse. The more experience you get, the happier you'll be to find a command line tool where you thought you'd have to use a GUI. The ability to script the command-line tool means that the slightly higher learning curve gives you a massive ROI in time saved. It will take time to get used to but... well, what else is a course for?
 
 ## The Course
 

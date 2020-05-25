@@ -1,4 +1,4 @@
-# ML Gets Buff: How to Roll Your Own Gym Environment
+# How to Roll Your Own OpenAI Gym Environment
 
 1. TOC
 {:toc}

@@ -5,14 +5,13 @@
 
 In my [last post](/2020/04/28/deep-rl-infosec.html), I outlined my belief that reinforcement learning is the proper paradigm for creating an autonomous pentesting agent. In addition, I provided a brief [introduction to reinforcement learning](/2020/04/28/deep-rl-infosec.html#reinforcement-learning). Read that if you'd like a quick refresher, though for anyone looking to dive into the field properly I heartily recommend [Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf).
 
-This blog post is part of my series on the development of an autonomous pentesting agent - if you don't know what that means and don't want to learn, feel free to skip to section 3 which goes over implementation. The code for this section can be found on my [github](https://github.com/SJCaldwell/multi-armed-bandit-gym).
+This blog post is part of my series on the development of an autonomous pentesting agent - if you don't know what that means and don't want to learn, feel free to skip to [section 3](#the-gym-interface) which goes over implementation. The code for this section can be found on my [github](https://github.com/SJCaldwell/multi-armed-bandit-gym).
 
 In that post I discussed the multi-armed bandit, and wrote a little code to describe that as an environment. In reinforcement learning, an *environment* is what your agent interacts with, and how it recieves its reward after taking action. For ease of reference, I'll post the code from the last post below:
 
 ## A simple Environment
 
 ```python
-
 import numpy as np
 
 class Environment:
@@ -106,7 +105,6 @@ class MultiArmedBanditEnv(Env):
         self.observation_space = spaces.Discrete(1) # just the reward of the last action
         self.bandit_success_prob = np.random.uniform(size=self.num_bandits) # Pick some random success probabilities
         self.info = info
-
 ```
 
 We're going to keep this environment basic. Our `MultiArmedBanditEnv` will only take two arguments, which is `n` for the number of bandits with their probability of success, which we instantiate with `np.random.uniform(size=self.num_bandits)`. We also pass an info dictionary as we discussed before. This will act as a running scratch space if we want it. This formulation of the multi-armed bandit problem doesn't really evolve, so there's not really any good information to bother saving.We'll include it anyway, for correctness.
@@ -136,7 +134,6 @@ Our step function has changed a bit to accomodate the gym interface. Our observa
         print('bandits success prob:')
         for i in range(self.num_bandits):
             print("arm {num} reward prob: {prob}".format(num=i, prob=self.bandit_success_prob[i]))
-
 ```
 
 For us, reset should just reroll some new bandit success probabilities. Render is also pretty simple - we just create a basic structure of printing those success probabilities. This would be used for comparing the agents conception of arm reward probability with the true distribution.
